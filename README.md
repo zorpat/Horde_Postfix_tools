@@ -1,9 +1,8 @@
-Postfix tool for setup base settings in Horde
-=============================================
+Tools to use with Horde and Postfixadmin
+========================================
 
-	
-Settings automatically set by this script:
-------------------------------------------
+Settings automatically set by "mailbox_postcreation_script.sh" script:
+----------------------------------------------------------------------
    1. Set Horde default identity "from address" to mailaddress given by Postfixadmin
    2. Set Horde users "full name" to mailaddress given by Postfixadmin
    3. Set Horde to save sent messages to "default_sent_foldername"
@@ -18,27 +17,21 @@ Settings automatically set by this script:
 
 Install steps (preferred for latest stable release):
 ----------------------------------------------
- - wget https://github.com/zorpat/Horde-GERMAN-default-settings-creator-for-Postfixadmin/archive/v0.1-stable.tar.gz
+ - wget https://github.com/zorpat/Horde_Postfix_tools/archive/v0.1-stable.tar.gz
  - tar -zxvf V0.1-stable.tar.gz
- - change variables to meet your requirements
- - cp mailbox_postcreation_script.sh /usr/local/bin/
- - chmod a+x mailbox_postcreation_script.sh
- - Edit "/var/www/postfixadmin/config.inc.php" and set:
-	$CONF['mailbox_postcreation_script'] = '/usr/local/bin/mailbox_postcreation_script.sh';
+ - open script you wanna use with you favourite editor (nano, vi, ..)
+ - Follow installation instruction on the beginning of every script
 
 Install steps for harcore users (always last beta):
  - git clone --depth 1 https://github.com/zorpat/Horde_Postfix_tools.git
- - change variables to meet your requirements
- - cp mailbox_postcreation_script.sh /usr/local/bin/
- - chmod a+x mailbox_postcreation_script.sh
- - Edit "/var/www/postfixadmin/config.inc.php" and set:
-	$CONF['mailbox_postcreation_script'] = '/usr/local/bin/mailbox_postcreation_script.sh';
+ - open script you wanna use with you favourite editor (nano, vi, ..)
+ - Follow installation instruction on the beginning of every script
 
 Check if updated is needed:
  - git pull --dry-run
  
 Update:
- - cd into GIT project root folder
+ - "cd" into GIT project root folder
  - git pull
 
 Update to a specifix commit:
